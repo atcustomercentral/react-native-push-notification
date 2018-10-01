@@ -161,7 +161,7 @@ public class RNPushNotificationHelper {
                 title = context.getPackageManager().getApplicationLabel(appInfo).toString();
             }
 
-            int priority = NotificationCompat.PRIORITY_HIGH;
+            int priority = NotificationCompat.PRIORITY_MAX;
             final String priorityString = bundle.getString("priority");
 
             if (priorityString != null) {
@@ -182,11 +182,11 @@ public class RNPushNotificationHelper {
                         priority = NotificationCompat.PRIORITY_DEFAULT;
                         break;
                     default:
-                        priority = NotificationCompat.PRIORITY_HIGH;
+                        priority = NotificationCompat.PRIORITY_MAX;
                 }
             }
 
-            int visibility = NotificationCompat.VISIBILITY_PRIVATE;
+            int visibility = NotificationCompat.VISIBILITY_PUBLIC;
             final String visibilityString = bundle.getString("visibility");
 
             if (visibilityString != null) {
@@ -201,7 +201,7 @@ public class RNPushNotificationHelper {
                         visibility = NotificationCompat.VISIBILITY_SECRET;
                         break;
                     default:
-                        visibility = NotificationCompat.VISIBILITY_PRIVATE;
+                        visibility = NotificationCompat.VISIBILITY_PUBLIC;
                 }
             }
 
@@ -538,7 +538,7 @@ public class RNPushNotificationHelper {
 
         Bundle bundle = new Bundle();
 
-        int importance = NotificationManager.IMPORTANCE_HIGH;
+        int importance = NotificationManager.IMPORTANCE_MAX;
         final String importanceString = bundle.getString("importance");
 
         if (importanceString != null) {
@@ -565,7 +565,7 @@ public class RNPushNotificationHelper {
                     importance = NotificationManager.IMPORTANCE_UNSPECIFIED;
                     break;
                 default:
-                    importance = NotificationManager.IMPORTANCE_HIGH;
+                    importance = NotificationManager.IMPORTANCE_MAX;
             }
         }
 
