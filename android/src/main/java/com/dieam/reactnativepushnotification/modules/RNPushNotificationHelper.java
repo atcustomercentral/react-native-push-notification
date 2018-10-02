@@ -161,7 +161,7 @@ public class RNPushNotificationHelper {
                 title = context.getPackageManager().getApplicationLabel(appInfo).toString();
             }
 
-            int priority = NotificationCompat.PRIORITY_MAX;
+            int priority = NotificationCompat.PRIORITY_HIGH;
             final String priorityString = bundle.getString("priority");
 
             if (priorityString != null) {
@@ -182,7 +182,7 @@ public class RNPushNotificationHelper {
                         priority = NotificationCompat.PRIORITY_DEFAULT;
                         break;
                     default:
-                        priority = NotificationCompat.PRIORITY_MAX;
+                        priority = NotificationCompat.PRIORITY_HIGH;
                 }
             }
 
@@ -538,7 +538,7 @@ public class RNPushNotificationHelper {
 
         Bundle bundle = new Bundle();
 
-        int importance = NotificationManager.IMPORTANCE_MAX;
+        int importance = NotificationManager.IMPORTANCE_HIGH;
         final String importanceString = bundle.getString("importance");
 
         if (importanceString != null) {
@@ -565,7 +565,7 @@ public class RNPushNotificationHelper {
                     importance = NotificationManager.IMPORTANCE_UNSPECIFIED;
                     break;
                 default:
-                    importance = NotificationManager.IMPORTANCE_MAX;
+                    importance = NotificationManager.IMPORTANCE_HIGH;
             }
         }
 
